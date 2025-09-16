@@ -1,0 +1,88 @@
+/* style.css - clean responsive styles for GO WOW CLEANING & TECHNICAL SERVICES */
+:root{
+  --primary: #0066a8;
+  --accent: #f2f6f8;
+  --dark: #222;
+  --muted: #666;
+  --radius: 8px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;color:var(--dark);background:#fff;line-height:1.5}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.site-header{background:linear-gradient(90deg,var(--primary),#0b79b1);color:#fff;padding:12px 0}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand h1{margin:0;font-size:18px;letter-spacing:0.4px}
+.license{margin:4px 0 0;font-size:13px;opacity:0.95}
+.actions{display:flex;gap:8px;align-items:center}
+.call-btn{background:rgba(255,255,255,0.12);color:#fff;padding:8px 10px;border-radius:6px;text-decoration:none;font-size:14px}
+
+/* Lang toggle */
+#lang-toggle{background:#fff;color:var(--primary);border:0;padding:8px 10px;border-radius:6px;cursor:pointer;font-weight:600}
+
+/* Hero */
+.hero{padding:28px 0}
+.hero-inner{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.hero-text{flex:1;min-width:260px}
+.hero-image{flex:0 0 320px;min-width:220px}
+.image-box{height:200px;background-image:url('https://images.unsplash.com/photo-1581579181109-7c5b7d7e6ecb?auto=format&fit=crop&w=800&q=60');background-size:cover;background-position:center;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.hero h2{margin:0 0 8px;font-size:20px;color:var(--primary)}
+.hero p{margin:0 0 14px;color:var(--muted)}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+.btn.whatsapp{background:#25D366;color:#fff;margin-left:6px;padding:10px 12px;border-radius:8px;display:inline-block}
+
+/* About */
+.about{padding:16px 0;border-top:1px solid #eee}
+.about p{margin:10px 0 0;color:var(--muted)}
+
+/* Services */
+.services{padding:18px 0}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.service-card{background:var(--accent);padding:12px;border-radius:8px}
+.service-card h4{margin:0 0 8px}
+.service-card p{margin:0;color:var(--muted)}
+
+/* Why choose us */
+.why{padding:18px 0}
+.reasons{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0}
+.reasons li{background:#fff;border-radius:8px;padding:10px 12px;border:1px solid #eee;min-width:160px}
+
+/* Contact */
+.contact{padding:18px 0;border-top:1px solid #eee}
+.contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:12px}
+.contact-card{background:var(--accent);padding:12px;border-radius:8px}
+.contact-item a{color:var(--primary);text-decoration:none}
+
+/* Quote form */
+.quote-form{background:#fafafa;padding:12px;border-radius:10px}
+.quote-form form{display:grid;gap:8px}
+.quote-form input, .quote-form textarea{padding:10px;border-radius:6px;border:1px solid #ddd;width:100%;font-size:14px}
+.quote-form button{border:0;padding:10px;border-radius:8px;background:var(--primary);color:#fff;font-weight:700;cursor:pointer}
+
+/* Footer */
+.site-footer{padding:12px 0;background:#f5f7f8;margin-top:18px}
+.site-footer p{margin:6px 0;color:var(--muted);font-size:14px}
+
+/* Utilities */
+.hidden{display:none !important}
+
+/* RTL styles */
+html[dir="rtl"]{
+  direction:rtl;
+}
+body.ar .wrap{direction:rtl}
+body.ar .hero-inner{flex-direction:row-reverse}
+
+/* Responsive */
+@media (max-width:720px){
+  .site-header .wrap{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero-image{flex-basis:100%}
+  .image-box{height:160px}
+}
